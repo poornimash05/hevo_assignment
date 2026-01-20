@@ -5,11 +5,11 @@ This repository contains Hevo assignments. Each assignment is stored in a separa
 
 hevo_assignment/
 │
-├── assignment_1/ # Hevo Exercise – Assessment I
+├── assignment_01/ # Hevo Exercise – Assessment I
 │ ├── sql/
 │ └── README.md
 │
-├── assignment_2/ # Hevo Exercise – Assessment II
+├── assignment_02/ # Hevo Exercise – Assessment II
 │ ├── sql/
 |└── README.md
 └── README.md
