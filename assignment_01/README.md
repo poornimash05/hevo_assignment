@@ -94,7 +94,7 @@ Transformations were applied using Hevo’s transformation interface:
 Example:
 `jane.doe@gmail.com` → `jane.doe`
 
-## 🧩 Assumptions Made
+## Assumptions Made
 
 ### 1. Status field
 - Implemented as **VARCHAR**, not ENUM.
