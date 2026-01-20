@@ -1,0 +1,16 @@
+CREATE OR REPLACE TABLE PC_HEVODATA_DB.PUBLIC.CUSTOMERS_CLEAN_FINAL AS
+SELECT
+    c.customer_id,
+    c.email,
+    c.phone,
+    COALESCE(cd.iso_code, 'UNKNOWN') AS country_code,
+    COALESCE(c.created_at, '1900-01-01'::TIMESTAMP) AS created_at
+
+FROM PC_HEVODATA_DB.PUBLIC.CUSTOMERS_CLEAN c
+LEFT JOIN PC_HEVODATA_DB.PUBLIC.COUNTRY_DIM cd
+    ON UPPER(TRIM(c.country_code)) IN (
+        UPPER(cd.country_name),
+        UPPER(cd.iso_code)
+    );
+
+SELECT * FROM PC_HEVODATA_DB.PUBLIC.CUSTOMERS_CLEAN_FINAL LIMIT 10;
