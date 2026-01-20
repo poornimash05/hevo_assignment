@@ -13,16 +13,14 @@ This repository contains the SQL scripts and documentation for the data pipeline
 ├── sql/
 │ ├── 01_create_postgres_tables.sql
 │ ├── 02_load_postgres_data.sql
-│ ├── 03_hevo_pipeline_setup_notes.md
-│ ├── 04_snowflake_raw_validation.sql
-│ ├── 05_customers_clean.sql
-│ ├── 06_customers_country_fix.sql
-│ ├── 07_orders_clean.sql
-│ ├── 08_products_clean.sql
-│ ├── 09_final_join.sql
-│ └── 10_final_validation.sql
+│ ├── 03_snowflake_raw_validation.sql
+│ ├── 04_customers_clean.sql
+│ ├── 05_customers_country_fix.sql
+│ ├── 06_orders_clean.sql
+│ ├── 07_products_clean.sql
+│ ├── 08_final_join.sql
+│ └── 09_final_validation.sql
 └── loom_recording_notes.md
-
 
 ---
 
