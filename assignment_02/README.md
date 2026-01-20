@@ -50,7 +50,7 @@ This repository contains the SQL scripts and documentation for the data pipeline
 - Confirm raw tables exist in Snowflake.
 - Validate row counts and sample records.
 
-## 🧼 Data Cleaning Steps (SQL Models)
+## Data Cleaning Steps (SQL Models)
 
 ### Step 5 — Deduplicate Customers
 - Keep latest record per customer_id
