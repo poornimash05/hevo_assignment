@@ -4,7 +4,7 @@ The goal is to replicate data from a PostgreSQL source to Snowflake using Hevo (
 
 ## Project Overview
 
-**Source:** PostgreSQL (Neon)  
+**Source:** PostgreSQL 
 **ETL Tool:** Hevo Data (Logical Replication)  
 **Destination:** Snowflake (Free Trial)
 
@@ -21,11 +21,10 @@ The task includes:
 ├── sql/
 │ ├── 01_create_postgres_tables.sql
 │ ├── 02_load_postgres_data.sql
-│ ├── 03_snowflake_raw_validation.sql
-│ ├── 04_customers_transform.sql
+│ ├── 03_hevo_transform.sql
+│ ├── 04_snowflake_raw_validation.sql
 │ ├── 05_orders_transform.sql
-│ └── 06_feedback_transform.sql
-└── loom_instructions.md
+├── 06__customers.transform.sql
 
 ### Step 1 — Set up Snowflake
 1. Sign up for Snowflake free trial.
@@ -110,35 +109,3 @@ Example:
 - No transformation was applied to `address`.
 
 ---
-
-## How Postgres was Connected to Hevo
-
-**Database Provider:** Neon (PostgreSQL)  
-**Connection Tool:** pgAdmin  
-**Process:**
-
-1. Created a Neon database.
-2. Connected using pgAdmin to confirm tables and data.
-3. Used the same Neon database connection details in Hevo.
-4. Hevo connected successfully using the host, port, database, username, and password.
-
-
-## Transformation Choices & Implementation
-
-### Orders → Event Table
-**Reasoning:**
-- The status field is event-like.
-- Converting to event table allows analytics on order lifecycle.
-
-**Implementation:**
-- Hevo transformation: conditional mapping of status to event_type
-- Result stored in Snowflake as `order_events`.
-
-### Customers → Username
-**Reasoning:**
-- Username is a common analytics dimension.
-- It can be derived from email without extra data.
-
-**Implementation:**
-- Extract substring before `@` using Hevo transformation formula.
-
