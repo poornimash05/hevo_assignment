@@ -18,11 +18,9 @@ This repository contains the SQL scripts and documentation for the data pipeline
 │ ├── 05_customers_country_fix.sql
 │ ├── 06_orders_clean.sql
 │ ├── 07_products_clean.sql
-│ ├── 08_final_join.sql
-│ └── 09_final_validation.sql
+│ ├── 08_final_join_and_validation.sql
 └── loom_recording_notes.md
 
----
 
 ## Requirements
 
