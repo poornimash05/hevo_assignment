@@ -24,7 +24,6 @@ The task includes:
 │ ├── 03_hevo_transform.sql
 │ ├── 04_snowflake_raw_validation.sql
 │ ├── 05_orders_transform.sql
-├── 06__customers.transform.sql
 
 ### Step 1 — Set up Snowflake
 1. Sign up for Snowflake free trial.
