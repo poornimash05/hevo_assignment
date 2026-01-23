@@ -17,13 +17,16 @@ The task includes:
 
 ## Repository Structure
 
-├── README.md
+├──images/
+│ ├── orders_event.png
+│ ├── customers.png
 ├── sql/
 │ ├── 01_create_postgres_tables.sql
 │ ├── 02_load_postgres_data.sql
 │ ├── 03_hevo_transform.sql
 │ ├── 04_snowflake_raw_validation.sql
 │ ├── 05_orders_transform.sql
+|__ README.md
 
 ### Step 1 — Set up Snowflake
 1. Sign up for Snowflake free trial.
