@@ -9,7 +9,12 @@ This repository contains the SQL scripts and documentation for the data pipeline
 
 ## Project Structure
 
-├── README.md
+├── images/
+│ ├── Products_clean.png
+│ ├── customers_clean.png
+│ ├── customers_clean_final.png
+│ ├── final_dataset.png
+│ ├── orders_clean.png
 ├── sql/
 │ ├── 01_create_postgres_tables.sql
 │ ├── 02_load_postgres_data.sql
@@ -19,6 +24,7 @@ This repository contains the SQL scripts and documentation for the data pipeline
 │ ├── 06_orders_clean.sql
 │ ├── 07_products_clean.sql
 │ ├── 08_final_join_and_validation.sql
+└── README.md
 └── loom_recording_notes.md
 
 
